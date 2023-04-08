@@ -7,6 +7,14 @@ text-align: center;
 }
 
 .bookmark-container{
+  position: sticky;
+  top:0;
+}
+
+.bookmark-blog{
   background: rgba(17, 17, 17, 0.05);
 border-radius: 8px;
+text-align: center;
+padding: 5px;
+margin-top: 25px;
 }

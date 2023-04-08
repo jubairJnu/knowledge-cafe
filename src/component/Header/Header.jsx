@@ -13,6 +13,10 @@ const Header = () => {
     <a href="/home">Home</a>
     <a href="/blog">Blog</a>
     <a href="/contact">Contact</a>
+    
+    </div>
+    <div className='header-person'>
+    <a href="/contact"><img src="img.png" alt="" /></a>
     </div>
     
     </nav>
