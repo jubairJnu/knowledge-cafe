@@ -23,7 +23,7 @@ const Post = ({handleBookmark,handleAddMin, post}) => {
       <span className='hasetag'>#begginer</span>
         <span className='hasetag'>#programmer</span>
         <div>
-          <button onClick={()=>{handleAddMin(time)} } >Mark as read</button>
+          <button className='addTime' onClick={()=>{handleAddMin(time)} } >Mark as read</button>
         </div>
 
     </div>

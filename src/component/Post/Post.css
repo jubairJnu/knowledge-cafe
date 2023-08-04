@@ -32,6 +32,11 @@ margin-top: 30px;
 
 }
 
+.addTime{
+  color: dodgerblue;
+  margin-top: 3px;
+}
+
 .author-title{
   justify-content: right;
   /* margin-left: 25px; */

@@ -1,0 +1,32 @@
+.question{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-top: 5px;
+
+  
+}
+.one{
+  background-color: dodgerblue;
+  padding: 20px;
+  color: white;
+  border-radius: 10px;
+}
+.two{
+  background-color:rgb(241, 75, 10);
+  padding: 20px;
+  color: white;
+  border-radius: 10px;
+}
+.three{
+  background-color: rgb(175, 83, 8);
+  padding: 20px;
+  color: white;
+  border-radius: 10px;
+}
+.four{
+  background-color:  rgb(8, 116, 44);
+  padding: 20px;
+  color: white;
+  border-radius: 10px;
+}
