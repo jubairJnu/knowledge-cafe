@@ -5,6 +5,7 @@ import './Blog.css'
 const Blog = () => {
   const [posts, setPosts] = useState([]);
   const [marked, setMarked] = useState([]);
+  const[readTime, setReadTime] = useState(0)
 
   useEffect(() => {
     fetch('data.json')
@@ -21,9 +22,15 @@ const Blog = () => {
       setMarked(newMarked);
       console.log(newMarked);
     } else {
-      // toast("Already Added!")
+      alert("Already Added")
     }
   }
+
+  const handleAddMin = (time) => {
+    console.log(time, "hello");
+    const newTime = readTime + time;
+    setReadTime(newTime);
+}
 
 
   return (
@@ -35,6 +42,7 @@ const Blog = () => {
             key={post.id}
             post={post}
             handleBookmark={handleBookmark}
+            handleAddMin={handleAddMin}
           ></Post>)
         }
       </div>
@@ -43,7 +51,7 @@ const Blog = () => {
 
         <div className='bookmark-container'>
           <div className="spent-time">
-            <h3>Spent Time On Read:  min</h3>
+            <h3>Spent Time On Read: {readTime}  min</h3>
           </div>
           <div className="bookmark-blog">
             <h3>Bookmarked Blogs : {marked.length} </h3>

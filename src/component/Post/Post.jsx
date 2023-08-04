@@ -2,8 +2,8 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
   import { faBookmark } from '@fortawesome/free-solid-svg-icons'
 import './Post.css'
-const Post = ({handleBookmark, post}) => {
-  const {name, picture, photo, time, title } =post;
+const Post = ({handleBookmark,handleAddMin, post}) => {
+  const {name, picture, photo, date,time, title } =post;
   return (
     <div className='post'>
       <img  src={picture} alt="" />
@@ -14,15 +14,17 @@ const Post = ({handleBookmark, post}) => {
         </div>
         <div className="author-title">
             <h3>{name}</h3>
-            <p>{time}</p>
+            <p>{date}</p>
           </div>
-        <p className='read-time'>5 min to read</p>
+        <p className='read-time'>{time} min to read</p>
         <button onClick={() => {handleBookmark(post)}}className='bookmar-icon'><FontAwesomeIcon icon={faBookmark}/> </button>
       </div>
       <h1>{title}</h1>
       <span className='hasetag'>#begginer</span>
         <span className='hasetag'>#programmer</span>
-        <p className='mark'>Mark as read</p>
+        <div>
+          <button onClick={()=>{handleAddMin(time)} } >Mark as read</button>
+        </div>
 
     </div>
   );
