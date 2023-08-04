@@ -1,11 +1,37 @@
-.blog-container{
+.blog-container {
   display: grid;
   grid-template-columns: 3fr 1fr;
   padding: 20px;
-  
+  gap: 40px;
+
 }
+
+/* bookmark css */
+
+.spent-time {
+  background: rgba(96, 71, 236, 0.1);
+  border: 1px solid #6047EC;
+  border-radius: 8px;
+  color: #6047EC;
+  text-align: center;
+}
+
+.bookmark-container {
+  position: sticky;
+  top: 0;
+}
+
+.bookmark-blog {
+  background: rgba(17, 17, 17, 0.05);
+  border-radius: 8px;
+  text-align: center;
+  padding: 5px;
+  margin-top: 25px;
+}
+
+
 @media screen and (max-width: 576px) {
-  .blog-container{
+  .blog-container {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
   }

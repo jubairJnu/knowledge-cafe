@@ -1,10 +1,12 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+  import { faBookmark } from '@fortawesome/free-solid-svg-icons'
 import './Post.css'
-const Post = (props) => {
-  const { name, picture, photo, time, title } = props.post
+const Post = ({handleBookmark, post}) => {
+  const {name, picture, photo, time, title } =post;
   return (
     <div className='post'>
-      <img src={picture} alt="" />
+      <img  src={picture} alt="" />
       <div className="author-container">
         <div className="author">
           <img src={photo} alt="" />
@@ -15,6 +17,7 @@ const Post = (props) => {
             <p>{time}</p>
           </div>
         <p className='read-time'>5 min to read</p>
+        <button onClick={() => {handleBookmark(post)}}className='bookmar-icon'><FontAwesomeIcon icon={faBookmark}/> </button>
       </div>
       <h1>{title}</h1>
       <span className='hasetag'>#begginer</span>

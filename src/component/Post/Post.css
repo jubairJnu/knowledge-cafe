@@ -1,9 +1,15 @@
 .post{
-  width: 850px;
-  height: 800px;
+  /* width: 850px;
+  height: 800px; */
   border: 2px solid red;
   margin-bottom: 40px;
   padding: 20px;
+}
+.post img{
+  /* display: block; */
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
 }
 .author{
   width: 60px;
@@ -14,7 +20,7 @@
  
 }
 .author img {
-  width: 100%;
+    width: 100%;
   height: 100%;
   border-radius: 50%;
 }
@@ -27,7 +33,8 @@ margin-top: 30px;
 }
 
 .author-title{
-  margin-left: 25px;
+  justify-content: right;
+  /* margin-left: 25px; */
 }
 .read-time{
   margin-left: 450px;
@@ -36,7 +43,16 @@ margin-top: 30px;
 .hasetag{
   margin: 10px;
 }
+.bookmar-icon{
+  margin-left: 10px;
+}
 
 .mark{
   text-decoration: underline;
+}
+@media screen and(max-width:576px) {
+  .post img{
+    width: 50%;
+    height: 50%;
+  }
 }
